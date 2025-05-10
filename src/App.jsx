@@ -29,6 +29,7 @@ function App() {
       <AuthProvider>
         <Navbar />
         <Routes >
+        <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route element={user ? <Outlet /> : <Navigate to="/login" />}>
