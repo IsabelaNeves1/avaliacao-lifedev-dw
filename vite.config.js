@@ -5,6 +5,17 @@ import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfil
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      crypto: 'crypto-browserify',
+      stream: 'stream-browserify',
+      assert: 'assert',
+      http: 'stream-http',
+      https: 'https-browserify',
+      os: 'os-browserify/browser',
+      url: 'url'
+    }
+  },
   optimizeDeps: {
     esbuildOptions: {
       define: {
@@ -17,11 +28,6 @@ export default defineConfig({
         }),
         NodeModulesPolyfillPlugin()
       ]
-    }
-  },
-  resolve: {
-    alias: {
-      crypto: 'crypto-browserify'
     }
   }
 });
