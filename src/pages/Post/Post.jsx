@@ -14,6 +14,7 @@ const Post = () => {
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
+          console.log("Post encontrado:", docSnap.data());
           setPost({ id: docSnap.id, ...docSnap.data() });
         } else {
           console.log("Post não encontrado");
