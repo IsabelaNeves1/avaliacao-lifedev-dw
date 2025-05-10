@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { auth } from "../firebase/config.jsx";
-import styles from './NavBar.module.css';
+import styles from './Navbar.module.css';
 const Navbar = () => {
   const { user } = useAuth();
 
