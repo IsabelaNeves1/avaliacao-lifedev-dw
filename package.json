@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@babel/types": "^7.27.1",
+    "buffer": "^6.0.3",
     "firebase": "^11.6.0",
+    "process": "^0.11.10",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.6.0"
